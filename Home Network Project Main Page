@@ -5,7 +5,17 @@ lessons learned, new discoveries, issues to troubleshoot, topics based, and supp
 
 1. Network Deployment
   - Router Installation/Configuration
+        The beginning of this project started with intent to upgrade overall LAN/WAN infrastructure by upgrading internet
+        speeds from 500 mbps to 1 gbps, as well as establishing a mesh topological network for higher wireless connectivity and less
+        deadzones. Thus, the Google Nest Router was purchased along with two other Google Nest Routers to act as wireless
+        access points (WAPs). Once routers were delivered, the old router was disconnected, and the new main Google Nest 
+        Router was connected to the Quantum Fiber ISP Modem via cat-6 ethernet cable, physically establishing a connection
+        capable of over 1 gbps. The Google Home software application was subsequently downloaded and configured with home-owner
+        credentials with administrative access to network controls. The new Wi-Fi began running with a new SSID and
+        WPA2-PSK security.
   - Mesh Topology Deployment
+        Upon successful Wi-Fi development, the two WAPs were plugged in at further points within the household to power up and connect to the main
+        router in the office.
   - Wireless Configuration
   - Device Connectivity
 
