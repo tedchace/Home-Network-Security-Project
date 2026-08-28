@@ -1,5 +1,62 @@
-Home Network Project
+Home Network Infrastructure Deployment & Security Hardening
 
 This file contains my overall process of installing, configuring, and testing/attacking my household Google Nest Router and mesh topology. It will contain
 lessons learned, new discoveries, issues to troubleshoot, topics based, and supportive images to provide context and integrity to my project.
 
+1. Network Deployment
+  - Router Installation/Configuration
+  - Mesh Topology Deployment
+  - Wireless Configuration
+  - Device Connectivity
+
+2. Troubleshooting & Optimization
+  - Connectivity Troubleshooting
+  - Mesh/Node Placement
+  - Wi-Fi Performance Testing
+  - Network Stability/Performance Validation
+
+3. Security Hardening
+  - Router Configuration Review
+  - DNS Security Configuration
+  - Cloudfare Malware-Blocking DNS
+  - Device Inventory
+  - Reduction of Unnecessary Exposure
+
+4. Network Segmentation
+  - Trusted/Main Network
+  - Guest/IoT Network
+  - Garage Controller Migration
+  - Pool Controller Migration
+  - Isolation Validation
+
+5. Wireless Security Assessment
+  - Authorized Wifite Testing
+  - Evaluate Wireless Security Posture
+
+6. Nmap - Network & Attack-Surface Assessment
+  - Host Discovery
+  - Asset Correlation
+  - Port Enumeration
+  - Service Detection
+  - IoT Exposure Analysis
+  - Endpoint Validation
+  - Before/After Segmentation Testing
+
+7. Wireshark - Traffic Analysis
+  - Protocol Identification
+  - DNS Analysis
+  - IoT Traffic Observation
+  - Normal Network Baseline
+
+8. Splunk / Wazuh - Monitoring & Detection
+  - Centralized Logging
+  - Endpoint Telemetry
+  - Dashboards
+  - Detection Rules
+  - Security-Event Investigation
+
+9. Python - Automation
+  - Parse Scan/Log Data
+  - Automate Asset Inventory
+  - Compare Network States
+  - Generate Security Reports
