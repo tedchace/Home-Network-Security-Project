@@ -62,11 +62,27 @@ lessons learned, new discoveries, issues to troubleshoot, topics based, and supp
         a doorbell camera, a security control panel, laptops, phones, a printer, a smart TV, an IoT Pool Controller, and an IoT Garage Door Opener.
   - Port Enumeration
         Upon correlating scanned IP addresses with potential susceptible network devices, more aggressive scans were performed in order to find opened ports
-        or services running on them. 
+        or services running on them. Port and service scans were ran using "-sV" on Zenmap against suspect network devices, where each device's respective
+        opened ports alongside the corresponding service would be displayed. This scan was leveraged against the laptop performing the Nmap analysis, security
+        devices, IoT devices, and the connected printer. The IoT devices were found susceptible, having ports 23 and 80 opened.
   - Service Detection
+        The services running on the opened ports on scanned devices provided important information regarding attack methodology. The IoT devices openly ran
+        Telnet (23) and HTTP (80) on the network, leaving them and the rest of the network open to exploitation. Furthermore, the laptop performing Nmap analyses
+        had open vmware services running on it over ports 902 and 912. These findings were futher validated through command prompt corroboration using "netstat"
+        and "tasklist" commands.
   - IoT Exposure Analysis
+        Seeing as though the IoT devices found within the LAN were running unsecure services over open ports across the network, change had to be made in order to harden
+        network security. However, the IoT devices required communication with personal devices in order to work properly, so they were still required a network connection.
+        Although the Google Nest Router does not supply VLAN capabilities or custom firewall filtering rules, it does allow for creation of a "Guest Network," in which devices 
+        can connect to the network and access the Internet, yet remain virtually segmented from main LAN devices. Although the Google Home App allows for a selection of devices
+        from the main LAN to be accessed from the Guest Network, such actions would be impractical for network security. In order to harden the network, IoT devices were
+        moved to the Guest Network.
   - Endpoint Validation
+        something something endpoint validation ??
   - Before/After Segmentation Testing
+        IoT devices were segmented to Guest Network in order to mitigate the main LAN's attack surface. An Nmap scan of the Guest Network shows successful IoT connections
+        with both devices receiving new IP addresses under the new Guest Network IP class. Successful testing concluded that such devices could still be utilized by personal
+        devices through cloud connectivity.
 
 7. Wireshark - Traffic Analysis
   - Protocol Identification
