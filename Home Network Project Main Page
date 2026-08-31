@@ -51,8 +51,18 @@ lessons learned, new discoveries, issues to troubleshoot, topics based, and supp
 
 6. Nmap - Network & Attack-Surface Assessment
   - Host Discovery
+        Nmap host discovery began with first connecting to the network, where I then obtained my IP address through "ipconfig /all" on the Windows Command 
+        Prompt. With Network IP and Subnet Mask, Zenmap software was utilized to run a quick "-sn" scan across the entire network for any connected devices. Many
+        devices were detected, some of which had device names that provided insight for its purpose. They will later be scanned for open ports in order to
+        better explain device type, services, and attack surface. 
   - Asset Correlation
+        The "nmap -sn [network IP/subnet]" scan not only returned the device IP addresses, but also device names and websites as well. For instance, some
+        phones were titled "iphone.lan([IP])" and laptops were titled "[name]-lt.lan([IP])". Furthermore, the security devices scanned had returned
+        their alarm system's website, and IoT devices were titled after the company which manufactured them. Total detected devices included security cameras,
+        a doorbell camera, a security control panel, laptops, phones, a printer, a smart TV, an IoT Pool Controller, and an IoT Garage Door Opener.
   - Port Enumeration
+        Upon correlating scanned IP addresses with potential susceptible network devices, more aggressive scans were performed in order to find opened ports
+        or services running on them. 
   - Service Detection
   - IoT Exposure Analysis
   - Endpoint Validation
