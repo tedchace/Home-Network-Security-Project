@@ -22,21 +22,37 @@ lessons learned, new discoveries, issues to troubleshoot, topics based, and supp
         zone range. The second WAP will also be feasible for quick outdoor IoT device connectivity. With the three points in place and powered up, they were
         wirelessly connected and tested through the Google Home App, with "Great connection" mesh ratings.
   - Wireless Configuration
-        Configuration of the Google Nest Mesh Topology involved 
+        Configuration of the Google Nest Mesh Topology involved
+        Google Home App, SSID and PSK, DHCP IP Reservations and DHCP IP Device Pool, Router LAN IP and Subnet Mask; Router and WAP naming, device naming, UPnP,
+        setting up device modes for each WAP and main router (NAT or Bridge), Guest Network, tested network speeds, etc.
   - Device Connectivity
+        Connecting indivual devices to network via PSK, later using WPA2/WPA3. Tested Device Speeds, Internet connection, communicated with other devices on
+        network (personal phone to Smart TV), etc.
 
 2. Troubleshooting & Optimization
   - Connectivity Troubleshooting
+        Device Connectivity, reconnecting, often power cycling router or modem or restarting individual device.
   - Mesh/Node Placement
+        Main Router in office, WAP in Kitchen/livingroom, WAP in far bedroom. Provides best coverage for preferred activities.
   - Wi-Fi Performance Testing
+        Ran tests on Google Home App and analyzed/measured performance metrics over time.
   - Network Stability/Performance Validation
+        Ran daily/weekly tests on Google Home App; provides measured results over time for network speeds, device and/or network Internet usage, etc. Validated
+        against 1 gbps speeds as opposed to previous 500 mbps speeds.
 
 3. Security Hardening
   - Router Configuration Review
+        Modem Bridge mode (Double NAT), LAN settings, IP reservations, DHCP Pool for new connections, etc.
   - DNS Security Configuration
+        Original DNS security configuration was set to default, where ISP DNS servers were utilized as well as backups. Less reliable.
   - Cloudfare Malware-Blocking DNS
+        Default ISP DNS assignment was improved with reassigning DNS settings to Cloudfare DNS servers with malware protection (1.1.1.2, 1.0.0.2).
   - Device Inventory
+        Connected devices to network, noting device type and IP, named devices, and assigned static IP reservations for important network devices (security)
+        Later used NMAP via Zenmap to scan network devices and obtain in-depth device inventory.
   - Reduction of Unnecessary Exposure
+        Mitigate attack surface via segmentation of exposed devices to Guest Network, limiting sharing of resources as well. Increase network encryption
+        from WPA2 to WPA2/WPA3. Increase PSK complexity and length. No port forwarding rules, UPnP?, etc.
 
 4. Network Segmentation
   - Trusted/Main Network
