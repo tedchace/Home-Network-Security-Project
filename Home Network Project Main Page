@@ -77,7 +77,12 @@ lessons learned, new discoveries, issues to troubleshoot, topics based, and supp
 
 5. Wireless Security Assessment
   - Authorized Wifite Testing
+        Simulated a network attack by using Wifite software to crack Main Network password (SSID PSK). First used Wifite to scan for Wifi broadcast. Upon detection
+        of Main Network SSID, brute-force attack commenced, which successfully cracked network password and obtained access to network resources.
   - Evaluate Wireless Security Posture
+        Successful Wifite test proves the limitations of current security levels of network, as the broadcasted Wifi signal allows wireless network attacks to occur
+        at any time unknowingly. Network password (PSK) changes were made to increase complexity and length. Furthermore, the router's encryption was upgraded from
+        WPA2 to WPA2/WPA3 in order to better protect against (CONTINUE EDITING HERE)
 
 6. Nmap - Network & Attack-Surface Assessment
   - Host Discovery
