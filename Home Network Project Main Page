@@ -56,10 +56,24 @@ lessons learned, new discoveries, issues to troubleshoot, topics based, and supp
 
 4. Network Segmentation
   - Trusted/Main Network
+        Trusted/Main Network will remain with SSID and PSK for personal sensitive devices as well as critical network infrastructure (i.e. security, printers, etc.)
+        Will retain minimum necessary devices with optimized network protocols for safe, efficient network and Internet usage.
   - Guest/IoT Network
+        Created Guest Network for guest devices as well as less important or susceptible network devices (i.e. IoT household devices). IoT devices
+        such as garage door and pool controller were moved to Guest Network, where they are logically segmented from critical network whilst maintaining
+        connectibility to personal phones via app controllers using cloud services. Devices on Guest Network requiring access to Main Network resources
+        (i.e. casting to Smart TV), can obtain such access on an as-needed basis via Google Home App.
   - Garage Controller Migration
+        Garage Door was deemed exposed via Nmap open port scans, where it was promptly removed from Main Network and added to Guest Network via personal 
+        phone application controller. IoT device's Guest Network connectivity was verified via Nmap. Usability through cloud services was tested and verified 
+        via personal phone application.
   - Pool Controller Migration
+        Pool Controller was deemed susceptible via Nmap open port scans, which was then removed from Main Network and added to Guest Network via personal phone
+        application controller. IoT device's Guest Network connectivity was verified via Nmap. Usability through cloud services was tested and verified via 
+        personal phone application.
   - Isolation Validation
+        Nmap via Zenmap software was used to scan the Guest Network to verify IoT devices connected, as well as new IP address assignments. Segmentation
+        prevents Guest devices from accessing Main Network resources, whilst still maintaining Internet access and usability via cloud services.
 
 5. Wireless Security Assessment
   - Authorized Wifite Testing
