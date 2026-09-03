@@ -5,42 +5,119 @@ lessons learned, new discoveries, issues to troubleshoot, topics based, and supp
 
 1. Network Deployment
   - Router Installation/Configuration
+        The beginning of this project started with intent to upgrade overall LAN/WAN infrastructure by upgrading internet
+        speeds from 500 mbps to 1 gbps, as well as establishing a mesh topological network for higher wireless connectivity and less
+        deadzones. Thus, the Google Nest Router was purchased along with two other Google Nest Routers to act as wireless
+        access points (WAPs). Once routers were delivered, the old router was disconnected, and the new main Google Nest 
+        Router was connected to the Quantum Fiber ISP Modem via cat-6 ethernet cable, physically establishing a connection
+        capable of over 1 gbps. The Google Home software application was subsequently downloaded and configured with home-owner
+        credentials with administrative access to network controls. The new Wi-Fi began running with a new SSID and
+        WPA2-PSK security.
   - Mesh Topology Deployment
+        The first main office router is placed in the office, on one end of the house, closest to the ISP modem and will provide high connectivity with
+        minimum latency for business purposes. Upon successful Wi-Fi development, the two WAPs were plugged in at further points within the household to power up and connect to the main
+        router in the office. One WAP was plugged in between the kitchen and living room area with minimal physical interference (i.e. walls, objects, etc.)
+        between it and the main office router. The kitchen/livingroom location will benefit connectivity for general activities, as it will provide a primary
+        access point for users in popular common spaces. The second and final WAP was placed in the far bedroom in order to extend and optimize effective hot
+        zone range. The second WAP will also be feasible for quick outdoor IoT device connectivity. With the three points in place and powered up, they were
+        wirelessly connected and tested through the Google Home App, with "Great connection" mesh ratings.
   - Wireless Configuration
+        Configuration of the Google Nest Mesh Topology involved
+        Google Home App, SSID and PSK, DHCP IP Reservations and DHCP IP Device Pool, Router LAN IP and Subnet Mask; Router and WAP naming, device naming, UPnP,
+        setting up device modes for each WAP and main router (NAT or Bridge), Guest Network, tested network speeds, etc.
   - Device Connectivity
+        Connecting indivual devices to network via PSK, later using WPA2/WPA3. Tested Device Speeds, Internet connection, communicated with other devices on
+        network (personal phone to Smart TV), etc.
 
 2. Troubleshooting & Optimization
   - Connectivity Troubleshooting
+        Device Connectivity, reconnecting, often power cycling router or modem or restarting individual device.
   - Mesh/Node Placement
+        Main Router in office, WAP in Kitchen/livingroom, WAP in far bedroom. Provides best coverage for preferred activities.
   - Wi-Fi Performance Testing
+        Ran tests on Google Home App and analyzed/measured performance metrics over time.
   - Network Stability/Performance Validation
+        Ran daily/weekly tests on Google Home App; provides measured results over time for network speeds, device and/or network Internet usage, etc. Validated
+        against 1 gbps speeds as opposed to previous 500 mbps speeds.
 
 3. Security Hardening
   - Router Configuration Review
+        Modem Bridge mode (Double NAT), LAN settings, IP reservations, DHCP Pool for new connections, etc.
   - DNS Security Configuration
+        Original DNS security configuration was set to default, where ISP DNS servers were utilized as well as backups. Less reliable.
   - Cloudfare Malware-Blocking DNS
+        Default ISP DNS assignment was improved with reassigning DNS settings to Cloudfare DNS servers with malware protection (1.1.1.2, 1.0.0.2).
   - Device Inventory
+        Connected devices to network, noting device type and IP, named devices, and assigned static IP reservations for important network devices (security)
+        Later used NMAP via Zenmap to scan network devices and obtain in-depth device inventory.
   - Reduction of Unnecessary Exposure
+        Mitigate attack surface via segmentation of exposed devices to Guest Network, limiting sharing of resources as well. Increase network encryption
+        from WPA2 to WPA2/WPA3. Increase PSK complexity and length. No port forwarding rules, UPnP?, etc.
 
 4. Network Segmentation
   - Trusted/Main Network
+        Trusted/Main Network will remain with SSID and PSK for personal sensitive devices as well as critical network infrastructure (i.e. security, printers, etc.)
+        Will retain minimum necessary devices with optimized network protocols for safe, efficient network and Internet usage.
   - Guest/IoT Network
+        Created Guest Network for guest devices as well as less important or susceptible network devices (i.e. IoT household devices). IoT devices
+        such as garage door and pool controller were moved to Guest Network, where they are logically segmented from critical network whilst maintaining
+        connectibility to personal phones via app controllers using cloud services. Devices on Guest Network requiring access to Main Network resources
+        (i.e. casting to Smart TV), can obtain such access on an as-needed basis via Google Home App.
   - Garage Controller Migration
+        Garage Door was deemed exposed via Nmap open port scans, where it was promptly removed from Main Network and added to Guest Network via personal 
+        phone application controller. IoT device's Guest Network connectivity was verified via Nmap. Usability through cloud services was tested and verified 
+        via personal phone application.
   - Pool Controller Migration
+        Pool Controller was deemed susceptible via Nmap open port scans, which was then removed from Main Network and added to Guest Network via personal phone
+        application controller. IoT device's Guest Network connectivity was verified via Nmap. Usability through cloud services was tested and verified via 
+        personal phone application.
   - Isolation Validation
+        Nmap via Zenmap software was used to scan the Guest Network to verify IoT devices connected, as well as new IP address assignments. Segmentation
+        prevents Guest devices from accessing Main Network resources, whilst still maintaining Internet access and usability via cloud services.
 
 5. Wireless Security Assessment
   - Authorized Wifite Testing
+        Simulated a network attack by using Wifite software to crack Main Network password (SSID PSK). First used Wifite to scan for Wifi broadcast. Upon detection
+        of Main Network SSID, brute-force attack commenced, which successfully cracked network password and obtained access to network resources.
   - Evaluate Wireless Security Posture
+        Successful Wifite test proves the limitations of current security levels of network, as the broadcasted Wifi signal allows wireless network attacks to occur
+        at any time unknowingly. Network password (PSK) changes were made to increase complexity and length. Furthermore, the router's encryption was upgraded from
+        WPA2 to WPA2/WPA3 in order to better protect against (CONTINUE EDITING HERE)
 
 6. Nmap - Network & Attack-Surface Assessment
   - Host Discovery
+        Nmap host discovery began with first connecting to the network, where I then obtained my IP address through "ipconfig /all" on the Windows Command 
+        Prompt. With Network IP and Subnet Mask, Zenmap software was utilized to run a quick "-sn" scan across the entire network for any connected devices. Many
+        devices were detected, some of which had device names that provided insight for its purpose. They will later be scanned for open ports in order to
+        better explain device type, services, and attack surface. 
   - Asset Correlation
+        The "nmap -sn [network IP/subnet]" scan not only returned the device IP addresses, but also device names and websites as well. For instance, some
+        phones were titled "iphone.lan([IP])" and laptops were titled "[name]-lt.lan([IP])". Furthermore, the security devices scanned had returned
+        their alarm system's website, and IoT devices were titled after the company which manufactured them. Total detected devices included security cameras,
+        a doorbell camera, a security control panel, laptops, phones, a printer, a smart TV, an IoT Pool Controller, and an IoT Garage Door Opener.
   - Port Enumeration
+        Upon correlating scanned IP addresses with potential susceptible network devices, more aggressive scans were performed in order to find opened ports
+        or services running on them. Port and service scans were ran using "-sV" on Zenmap against suspect network devices, where each device's respective
+        opened ports alongside the corresponding service would be displayed. This scan was leveraged against the laptop performing the Nmap analysis, security
+        devices, IoT devices, and the connected printer. The IoT devices were found susceptible, having ports 23 and 80 opened.
   - Service Detection
+        The services running on the opened ports on scanned devices provided important information regarding attack methodology. The IoT devices openly ran
+        Telnet (23) and HTTP (80) on the network, leaving them and the rest of the network open to exploitation. Furthermore, the laptop performing Nmap analyses
+        had open vmware services running on it over ports 902 and 912. These findings were futher validated through command prompt corroboration using "netstat"
+        and "tasklist" commands.
   - IoT Exposure Analysis
+        Seeing as though the IoT devices found within the LAN were running unsecure services over open ports across the network, change had to be made in order to harden
+        network security. However, the IoT devices required communication with personal devices in order to work properly, so they were still required a network connection.
+        Although the Google Nest Router does not supply VLAN capabilities or custom firewall filtering rules, it does allow for creation of a "Guest Network," in which devices 
+        can connect to the network and access the Internet, yet remain virtually segmented from main LAN devices. Although the Google Home App allows for a selection of devices
+        from the main LAN to be accessed from the Guest Network, such actions would be impractical for network security. In order to harden the network, IoT devices were
+        moved to the Guest Network.
   - Endpoint Validation
+        something something endpoint validation ??
   - Before/After Segmentation Testing
+        IoT devices were segmented to Guest Network in order to mitigate the main LAN's attack surface. An Nmap scan of the Guest Network shows successful IoT connections
+        with both devices receiving new IP addresses under the new Guest Network IP class. Successful testing concluded that such devices could still be utilized by personal
+        devices through cloud connectivity.
 
 7. Wireshark - Traffic Analysis
   - Protocol Identification
