@@ -1,2 +1,3 @@
-# Projects-For-Important-People
-This will contain various projects started in order to become more familiar with different tools. Largely for skill-building and job hunting, similarly for personal interest.
+# Home Network Security Project
+
+This project contains my overall process of installing, configuring, and testing/attacking my Main LAN. It will contain lessons learned, new discoveries, issues to troubleshoot, topics based, and supportive images to provide context and integrity to my project.
