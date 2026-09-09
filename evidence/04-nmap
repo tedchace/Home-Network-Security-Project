@@ -1,0 +1,8 @@
+01-baseline-discovery.png,
+02-endpoint-service-enumeration.png,
+03-vmware-service-validation.png,
+04-pool-controller-telnet.png,
+05-garage-controller-enumeration.png,
+06-post-seg-main-scan.png,
+07-post-seg-guest-scan.png,
+08-cross-segment-tcp23-validation.png
