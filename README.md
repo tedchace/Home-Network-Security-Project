@@ -1,60 +1,75 @@
 # Home Network Infrastructure & Security Hardening Lab
 
-## Executive Summary
+A home lab covering mesh deployment, configuration hardening, authorized wireless assessment, IoT segmentation, packet analysis, Splunk monitoring, and Python reporting. The project connects each change to recorded evidence and separates observed results from unverified assumptions.
 
-## Project Objectives
+## Key Results
+
+| Main-LAN metric | Before | After |
+|---|---:|---:|
+| Hosts observed | 12 | 10 |
+| Open TCP service records | 39 | 34 |
+| Selected security-relevant service records | 5 | 1 |
+| Targeted IoT controllers observed on Main | 2 | 0 |
+
+Both selected controllers were correlated on Guest by matching MAC addresses. The service-count changes also include unrelated host/service differences; they are not vulnerability-reduction rates. [Source-data verification](documentation/python-xml-validation.md) explains the reconciliation.
+
+## What I Built
+
+- A three-point mesh network with a primary NAT router and two bridge-mode mesh points, managed through Google Home.
+- A separate Guest/IoT network for selected household controllers, with targeted reachability validation.
+- Splunk asset/service dashboards and a Windows failed-login threshold alert.
+- Python automation to parse Nmap XML, export inventories, and compare network states.
+
+Google Home recorded an Internet speed result of **975 Mbps download / 966 Mbps upload**. This is an app-reported Internet test, not a measurement of Wi-Fi performance in every room. [Deployment and hardening](documentation/deployment-and-hardening.md) covers installation, troubleshooting, DNS configuration, and operational checks.
 
 ## Network Architecture
-### Before
-- network-before.png
-### After
-- network-after.png
 
-## Security Assessment Workflow
-Deploy-->Baseline-->Assess-->Identify Exposure-->Remediate-->Validate-->Monitor-->Automate
+```mermaid
+flowchart LR
+    ISP[ISP connection] --> Router[Primary mesh router / NAT]
+    Router --- Nodes[Two mesh points / bridge mode]
+    Router --> Main[Trusted Main network]
+    Router --> Guest[Guest / IoT network]
+    Main --> Endpoints[User endpoints and retained infrastructure]
+    Guest --> Garage[Garage controller / TCP 80]
+    Guest --> Pool[Pool controller / TCP 23]
+```
 
-Nmap
-- attack-surface discovery
-Wireshark
-- packet-level validation
-Wifite / Aircrack-ng
-- authorized wireless-security assessment
-Network segmentation
-- preventive control
-Splunk
-- monitoring + detection
-Python
-- repeatable analysis + reporting
+Before segmentation, the two controllers shared Main with trusted endpoints. After migration, their services remained observable from Guest. The diagram represents logical roles; it does not specify physical backhaul or a complete firewall policy. [Architecture and evidence](Documentation/architecture.md).
 
-## Key Findings & Remediation
-- Finding 1 - Wireless credential exposure
-    - Wifite handshake capture
-    - Aircrack-ng controlled dictionary recovery
-    - WPA3 configuration
-- Finding 2 - IoT service exposure
-    - Nmap - pool controller TCP/23
+## Findings and Changes
 
-## Validation Results
-- Nmap Main --> Guest TCP/23 = filtered
-- Wireshark Main --> Guest ICMP = no response observed
+| Observation | Evidence | Interpretation / action |
+|---|---|---|
+| Pool controller exposed a Telnet-compatible service | Nmap and packet analysis | Migrated to Guest; no successful login or exploitation demonstrated |
+| Garage controller returned HTTP metadata | Nmap service enumeration | Migrated to Guest; device-control access not established |
+| Windows service listeners matched VMware processes | Service scan and local process mapping | Corroborated service ownership |
+| A captured wireless handshake validated a matching password candidate | Wifite and Aircrack-ng | Controlled dictionary test; stronger PSK and completed WPA3 change are user-reported |
 
-## Monitoring & Detection
-### Monitoring
-- Splunk segmentation comparison dashboard
-    - panel showing "open services" and "security-relevant services" pre --> post
-### Detection Engineering
-- Windows failed-login SPL --> Triggered Alert
-    - (put one in ReadMe and link to 2nd in Splunk Evidence directory)
+[Detailed findings](Documentation/findings.md) · [Wireless assessment](documentation/wireless-assessment.md)
 
-## Security Automation
-- Python-generated security_report.md
+## How I Validated It
 
-## Technologies Used
+Post-segmentation scans located both controllers on Guest. A targeted Main-to-Guest TCP/23 probe returned **filtered**, and Wireshark displayed eight ICMP requests to the Guest controllers without observed replies. These results support restricted reachability for the tested paths and protocols, not universal or bidirectional isolation. [Validation methodology and limits](documentation/remediation-validation.md).
 
-## Repository Structure
+Splunk visualized the inventory changes and recorded a scheduled Windows failed-login alert trigger. Python independently reproduced the Main inventory counts and compared the supplied reports. [Splunk analysis](documentation/splunk-analysis.md) · [Python verification](documentation/python-xml-validation.md)
 
-## Skills Demonstrated
+## Evidence and Skills
 
-## Limitations
+| Stage | Evidence |
+|---|---|
+| Deployment and performance | [01 — Deployment](evidence/01-deployment/README.md) |
+| Configuration review | [02 — Hardening](evidence/02-hardening/README.md) |
+| Authorized wireless testing | [03 — Wifite](evidence/03-wifite/README.md) |
+| Discovery and service enumeration | [04 — Nmap](evidence/04-nmap/README.md) |
+| Packet analysis | [05 — Wireshark](evidence/05-wireshark/README.md) |
+| Monitoring and detection | [06 — Splunk](evidence/06-splunk/README.md) |
+| Inventory and reporting automation | [07 — Python](evidence/07-python/README.md) |
 
-## Responsible Use
+Skills demonstrated include network deployment, troubleshooting, asset correlation, service enumeration, segmentation validation, packet interpretation, SIEM analytics, detection logic, Python XML processing, and technical documentation.
+
+## Scope and Publication Status
+
+All assessment activity concerns the user's authorized home lab. Open ports are observations rather than proof of exploitable vulnerabilities. WPA3 effectiveness, full isolation coverage, and DNS-blocking efficacy remain outside the demonstrated results.
+
+Public evidence uses solid redaction masks, and report identifiers are pseudonymized. [Sanitization notes](documentation/publication-sanitization.md) describe the changes and remaining Git-metadata boundary. No license has been selected.
