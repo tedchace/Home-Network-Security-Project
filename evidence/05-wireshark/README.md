@@ -73,7 +73,7 @@ Eight redacted screenshot derivatives. Solid masks remove identifying fields and
 
 ## Provenance
 
-Source: the user's local `Router Configuration & Test Project/Wireshark Captures` folder. Original source files remain in place. Copies are verified byte-for-byte by SHA-256, recorded in [sha256.csv](sha256.csv). The prior suggested filename list remains in [original-placeholder.txt](original-placeholder.txt); the register above supersedes it.
+Source: the user's local `Router Configuration & Test Project/Wireshark Captures` folder. Original source files remain in place. Copies are verified byte-for-byte by SHA-256, recorded in [sha256.csv](sha256.csv). The prior suggested filename list remains in original-placeholder.txt (private; not published); the register above supersedes it.
 
 | Original filename | Repository copy |
 |---|---|
@@ -94,7 +94,7 @@ W08 uses Main source 192.0.2.92. The [Nmap filtered TCP/23 test](../04-nmap/10-m
 
 The post-segmentation filter selects traffic containing the two Guest IPs; an ICMP error sourced by an intermediate router may not match those outer addresses. Do not infer that no diagnostic errors occurred outside the displayed view. No raw captures were analyzed in this update. A displayed zero-drop counter does not establish visibility of all network traffic.
 
-See [findings](../../Documentation/findings.md), [methodology](../../Documentation/methodology.md), and [validation](../../documentation/remediation-validation.md). See the integrated [Splunk evidence](../06-splunk/README.md).
+See [findings](../../documentation/findings.md), [methodology](../../documentation/methodology.md), and [validation](../../documentation/remediation-validation.md). See the integrated [Splunk evidence](../06-splunk/README.md).
 
 ## Source-data reconciliation update
 

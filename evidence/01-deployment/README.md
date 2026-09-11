@@ -3,7 +3,7 @@
 
 > Public screenshots are redacted derivatives. Addresses and names in the documentation are aliases, not literal transcriptions of the masked fields. Analysis was checked against private originals.
 
-Original Google Home screenshots supplied by the user, published as redacted derivatives. The [workflow account](../../documentation/deployment-and-hardening.md) supplies installation and placement context. The [original filename plan](original-placeholder.txt) is retained.
+Original Google Home screenshots supplied by the user, published as redacted derivatives. The [workflow account](../../documentation/deployment-and-hardening.md) supplies installation and placement context. The original filename plan (private; not published) is retained.
 
 | ID | Screenshot | Observation |
 |---|---|---|
@@ -13,8 +13,8 @@ Original Google Home screenshots supplied by the user, published as redacted der
 | D04 | [Device modes](04-mesh-device-modes.png) | Office NAT standard; two nodes Bridge; app says automatically set |
 | D05 | [Point health](05-mesh-point-health.png) | Both additional points rated Great connection |
 | D06 | [Internet speed](06-network-speed-validation.png) | September 9: 975 Mbps download, 966 Mbps upload |
-| D07 | [Speed history](07-network-performance-history.png) | Ten visible results, transcribed below |
-| D08 | [Earlier speed history](08-speed-history-improvement.png) | August 18 and 20 lower results followed by repeated higher August 21 results |
+| D07 | Speed history (private screenshot; transcription below) | Ten visible results, transcribed below |
+| D08 | [Earlier speed history](07-speed-history-improvement.png) | August 18 and 20 lower results followed by repeated higher August 21 results |
 
 | Displayed date | Download Mbps | Upload Mbps |
 |---|---:|---:|

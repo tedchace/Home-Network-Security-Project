@@ -14,11 +14,11 @@ The supplied screenshot, script, two CSVs and Markdown report are integrated. Th
 | Supplied report | [security_report.md](../../reports/security_report.md) | Pseudonymized supplied Markdown |
 | Guest derived inventory | [asset_inventory_guest_post_segmentation.csv](../../reports/asset_inventory_guest_post_segmentation.csv) | Generated during verification; not a supplied artifact |
 | Reconciliation | [python-xml-validation.md](../../documentation/python-xml-validation.md) | Results, scan metadata, identity correlation and limitations |
-| Reproduction tool | [verify_lab_data.py](../../automation/verify_lab_data.py) | Local-only verification; writes into ignored private output folder |
+| Reproduction tool | [verify_lab_data.py](../../Automation/verify_lab_data.py) | Local-only verification; writes into ignored private output folder |
 
-Source files came from the user's Router Configuration & Test Project and Python Scripts folders. [sha256.csv](sha256.csv) records public derivative filenames and hashes. The original filename plan remains in [original-placeholder.txt](original-placeholder.txt).
+Source files came from the user's Router Configuration & Test Project and Python Scripts folders. [sha256.csv](sha256.csv) records public derivative filenames and hashes. The original filename plan remains in original-placeholder.txt (private; not published).
 
-Raw XML is under `evidence/04-nmap/private/`; the unchanged script is `evidence/07-python/private/network_security_report.original.py`; the workflow is `Documentation/private/original-project-workflow.docx`. These ignored files remain local. The *_sanitized reports now contain pseudonymized derivatives. Verification uses the private original reports, not the public aliases.
+Raw XML is under `evidence/04-nmap/private/`; the unchanged script is `evidence/07-python/private/network_security_report.original.py`; the workflow is `documentation/private/original-project-workflow.docx`. These ignored files remain local. The *_sanitized reports now contain pseudonymized derivatives. Verification uses the private original reports, not the public aliases.
 
 ## Verified result
 

@@ -21,7 +21,7 @@ The user identifies this as an authorized assessment of their own home network, 
 | Wifite - Offline Dictionary Attack.png | 02-offline-dictionary-validation.png |
 | Wifite - WPA3 Remediation.png | 03-wpa3-enablement-confirmation.png |
 
-Source: Router Configuration & Test Project/Wifite Simulation. Originals remain in place; [sha256.csv](sha256.csv) records public derivative hashes. [original-placeholder.txt](original-placeholder.txt) preserves the previous filename plan. Passwords, derived keys, and candidate strings are not transcribed into the documentation. The original images remain in the private backup outside the repository.
+Source: Router Configuration & Test Project/Wifite Simulation. Originals remain in place; [sha256.csv](sha256.csv) records public derivative hashes. original-placeholder.txt (private; not published) preserves the previous filename plan. Passwords, derived keys, and candidate strings are not transcribed into the documentation. The original images remain in the private backup outside the repository.
 
 ## Evidence boundary
 
@@ -29,4 +29,4 @@ F01 shows that the initial dictionary failed; F02 shows success with a small cus
 
 The user reports completing WPA3 hardening, and the original workflow describes WPA2/WPA3 operation and a stronger PSK. F03 alone is a pending confirmation view. It does not establish WPA3-only mode, per-client negotiated security, or resistance to a repeat assessment. No claim that the captured old handshake became unusable or that all legacy clients now use WPA3 follows from this screenshot.
 
-See [wireless analysis](../../documentation/wireless-assessment.md), [findings](../../Documentation/findings.md), and [validation](../../documentation/remediation-validation.md).
+See [wireless analysis](../../documentation/wireless-assessment.md), [findings](../../documentation/findings.md), and [validation](../../documentation/remediation-validation.md).

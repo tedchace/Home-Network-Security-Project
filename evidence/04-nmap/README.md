@@ -37,11 +37,11 @@ Original files were copied from the local project folder `Router Configuration &
 | Nmap - Post Segmentation Access Validation.png | 10-main-to-guest-tcp23-filtered.png |
 | Nmap - Pre & Post Network Comparison.png | 11-pre-post-network-comparison.png |
 
-SHA-256 values are recorded in [sha256.csv](sha256.csv). The prior placeholder list is retained in [original-placeholder.txt](original-placeholder.txt).
+SHA-256 values are recorded in [sha256.csv](sha256.csv). The prior placeholder list is retained in original-placeholder.txt (private; not published).
 
 ## Interpretation
 
-Read the selected scan output rather than relying on Zenmap's editable command bar or accumulated host sidebar. Topology screenshots provide visible inventory context, not a complete physical map or firewall policy. Discovery absence alone does not establish remediation. See [findings](../../Documentation/findings.md) and [validation](../../documentation/remediation-validation.md).
+Read the selected scan output rather than relying on Zenmap's editable command bar or accumulated host sidebar. Topology screenshots provide visible inventory context, not a complete physical map or firewall policy. Discovery absence alone does not establish remediation. See [findings](../../documentation/findings.md) and [validation](../../documentation/remediation-validation.md).
 
 ## Source-data reconciliation update
 

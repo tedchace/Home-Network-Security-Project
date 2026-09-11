@@ -3,7 +3,7 @@
 
 ## Source and evidence standard
 
-This account expands phases 1–6 of the user's original Router Configuration & Test Project Workflow. Configuration and usability details attributed to the notes are part of the project record; they are not substitutes for independent measurements. Existing screenshots and XML corroborate the assessment and segmentation results where linked. The original DOCX remains unchanged in the local ignored Documentation/private directory. Its unfinished prompts were not treated as instructions to run new tests.
+This account expands phases 1–6 of the user's original Router Configuration & Test Project Workflow. Configuration and usability details attributed to the notes are part of the project record; they are not substitutes for independent measurements. Existing screenshots and XML corroborate the assessment and segmentation results where linked. The original DOCX remains unchanged in the local ignored documentation/private directory. Its unfinished prompts were not treated as instructions to run new tests.
 
 ## 1. Network deployment
 
@@ -45,7 +45,7 @@ Placement was chosen around the office, common spaces and far bedroom to balance
 
 ### Wi-Fi performance testing
 
-Google Home tests were used to inspect performance over time. The [Internet speed result](../evidence/01-deployment/06-network-speed-validation.png) records 975 Mbps download and 966 Mbps upload for September 9. The [later visible history](../evidence/01-deployment/07-network-performance-history.png) shows ten results spanning August 29–September 9, ranging from 788–975 Mbps download and 819–989 Mbps upload. The [earlier visible history](../evidence/01-deployment/08-speed-history-improvement.png) includes lower August 18 and August 20 results followed by repeated higher August 21 measurements. The year is not displayed. These are app-reported Internet speed measurements; they do not establish phone Wi-Fi throughput in every room. No controlled pre-upgrade baseline supports a precise percentage improvement claim.
+Google Home tests were used to inspect performance over time. The [Internet speed result](../evidence/01-deployment/06-network-speed-validation.png) records 975 Mbps download and 966 Mbps upload for September 9. The later history (private screenshot; [transcription](../evidence/01-deployment/README.md)) shows ten results spanning August 29–September 9, ranging from 788–975 Mbps download and 819–989 Mbps upload. The [earlier visible history](../evidence/01-deployment/07-speed-history-improvement.png) includes lower August 18 and August 20 results followed by repeated higher August 21 measurements. The year is not displayed. These are app-reported Internet speed measurements; they do not establish phone Wi-Fi throughput in every room. No controlled pre-upgrade baseline supports a precise percentage improvement claim.
 
 ### Stability and performance validation
 

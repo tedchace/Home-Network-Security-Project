@@ -3,7 +3,7 @@
 
 > Public screenshots are redacted derivatives. Addresses and names in the documentation are aliases, not literal transcriptions of the masked fields. Analysis was checked against private originals.
 
-Google Home screenshots supplied by the user, preserved privately; public copies are redacted. See the [deployment and hardening account](../../documentation/deployment-and-hardening.md) and retained [original filename plan](original-placeholder.txt).
+Google Home screenshots supplied by the user, preserved privately; public copies are redacted. See the [deployment and hardening account](../../documentation/deployment-and-hardening.md) and retained original filename plan (private; not published).
 
 | ID | Screenshot | Observation and boundary |
 |---|---|---|

@@ -29,7 +29,7 @@ Sixteen screenshots and one original dashboard PDF, published as redacted deriva
 
 ## Provenance
 
-Source: the user's local `Router Configuration & Test Project/Splunk Activities` folder. Original files remain in place. SHA-256 hashes in [sha256.csv](sha256.csv) verify public derivatives. The earlier filename plan is retained in [original-placeholder.txt](original-placeholder.txt).
+Source: the user's local `Router Configuration & Test Project/Splunk Activities` folder. Original files remain in place. SHA-256 hashes in [sha256.csv](sha256.csv) verify public derivatives. The earlier filename plan is retained in original-placeholder.txt (private; not published).
 
 | Original | Repository filename |
 |---|---|
@@ -62,7 +62,7 @@ Source: the user's local `Router Configuration & Test Project/Splunk Activities`
 - S15's fixed five-minute bins are not a sliding window. Account_Name may contain multiple values; inspect raw Event 4625 fields and target-account extraction before interpreting the two rows as independent attempts. Source 127.0.0.1 is loopback, not an identified remote attacker.
 - S16 proves a recorded alert trigger, but not notification delivery, complete incident investigation, or malicious activity. Test-generation details remain project context unless separately evidenced.
 
-See [Splunk analysis](../../documentation/splunk-analysis.md), [findings](../../Documentation/findings.md), and [validation](../../documentation/remediation-validation.md). [Python/XML verification](../07-python/README.md) is complete for the supplied files.
+See [Splunk analysis](../../documentation/splunk-analysis.md), [findings](../../documentation/findings.md), and [validation](../../documentation/remediation-validation.md). [Python/XML verification](../07-python/README.md) is complete for the supplied files.
 
 ## Source-data reconciliation update
 

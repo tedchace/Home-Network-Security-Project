@@ -35,7 +35,7 @@ flowchart LR
     Guest --> Pool[Pool controller / TCP 23]
 ```
 
-Before segmentation, the two controllers shared Main with trusted endpoints. After migration, their services remained observable from Guest. The diagram represents logical roles; it does not specify physical backhaul or a complete firewall policy. [Architecture and evidence](Documentation/architecture.md).
+Before segmentation, the two controllers shared Main with trusted endpoints. After migration, their services remained observable from Guest. The diagram represents logical roles; it does not specify physical backhaul or a complete firewall policy. [Architecture and evidence](documentation/architecture.md).
 
 ## Findings and Changes
 
@@ -46,7 +46,7 @@ Before segmentation, the two controllers shared Main with trusted endpoints. Aft
 | Windows service listeners matched VMware processes | Service scan and local process mapping | Corroborated service ownership |
 | A captured wireless handshake validated a matching password candidate | Wifite and Aircrack-ng | Controlled dictionary test; stronger PSK and completed WPA3 change are user-reported |
 
-[Detailed findings](Documentation/findings.md) · [Wireless assessment](documentation/wireless-assessment.md)
+[Detailed findings](documentation/findings.md) · [Wireless assessment](documentation/wireless-assessment.md)
 
 ## How I Validated It
 
@@ -72,4 +72,4 @@ Skills demonstrated include network deployment, troubleshooting, asset correlati
 
 All assessment activity concerns the user's authorized home lab. Open ports are observations rather than proof of exploitable vulnerabilities. WPA3 effectiveness, full isolation coverage, and DNS-blocking efficacy remain outside the demonstrated results.
 
-Public evidence uses solid redaction masks, and report identifiers are pseudonymized. [Sanitization notes](documentation/publication-sanitization.md) describe the changes and remaining Git-metadata boundary. No license has been selected.
+Public evidence uses solid redaction masks, and report identifiers are pseudonymized. [Sanitization notes](documentation/publication-sanitization.md) describe the changes and remaining Git-metadata boundary. Automation code is licensed under [MIT](Automation/LICENSE). Documentation and evidence outside the automation directory are not separately licensed unless stated.

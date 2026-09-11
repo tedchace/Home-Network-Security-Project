@@ -1,7 +1,7 @@
 <!-- Public derivative: identifiers are pseudonymized; see documentation/publication-sanitization.md. -->
 # Project Workflow and Context
 
-The user's original workflow document records the motivation, implementation notes, and nine-phase learning plan. It is a partially completed working document, not a final test report. An unchanged local copy is retained as `Documentation/private/original-project-workflow.docx`; it is ignored by Git. The notes below are attributed to that document unless linked evidence independently corroborates them.
+The user's original workflow document records the motivation, implementation notes, and nine-phase learning plan. It is a partially completed working document, not a final test report. An unchanged local copy is retained as `documentation/private/original-project-workflow.docx`; it is ignored by Git. The notes below are attributed to that document unless linked evidence independently corroborates them.
 
 | Phase | Context from the user's notes | Evidence status |
 |---|---|---|
