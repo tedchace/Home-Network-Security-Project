@@ -19,4 +19,4 @@ Masks can hide context alongside identifiers. Detailed findings describe the ori
 
 Raw captures, raw XML, the original workflow and private verification outputs remain excluded by .gitignore. Do not force-add private files. The clean publication archive excludes all private files and Git metadata.
 
-Existing Git history contains author/committer email metadata and was not rewritten. The working-tree sanitization does not change that metadata. Publishing the existing Git history requires a separate decision about attribution/privacy; the clean archive provides a history-free publication source. No commit, push or remote publication was performed.
+Existing Git history contains author/committer email metadata and was not rewritten. The working-tree sanitization does not change that metadata. Publishing the existing Git history requires a separate decision about attribution/privacy; the clean archive provides a history-free publication source.
