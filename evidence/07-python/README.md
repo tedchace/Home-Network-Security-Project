@@ -22,4 +22,4 @@ Raw XML is under `evidence/04-nmap/private/`; the unchanged script is `evidence/
 
 ## Verified result
 
-Main inventories reproduce 12 → 10 hosts and 39 → 34 open TCP service records. The chosen Splunk classification reproduces 5 → 1. Both supplied CSVs match regenerated records, and report lines match allowing set-related ordering differences. Guest XML records four hosts/14 open service records, including the same MyQ/Hayward MACs and their still-open TCP/80 and TCP/23 services. See the reconciliation for scope and the Guest run-summary discrepancy.
+Main inventories reproduce 12 → 10 hosts and 39 → 34 open TCP service records. The chosen Splunk classification reproduces 5 → 1. Both supplied CSVs match regenerated records, and report lines match allowing set-related ordering differences. Guest XML records four hosts/14 open service records, including the same Garage Controller/Pool Controller MACs and their still-open TCP/80 and TCP/23 services. See the reconciliation for scope and the Guest run-summary discrepancy.
