@@ -421,9 +421,9 @@ def generate_security_report(
         report.write(
             "The post-segmentation Main LAN scan showed changes in "
             "observed hosts compared to the results from the "
-            "pre-segmentation Main LAN scan. The Hayward OmniLogic "
-            "pool controller and MyQ garage door opener, which were "
-            "previously observed on the Main LAN, were no longer "
+            "pre-segmentation Main LAN scan. The pool controller "
+            "and garage door opener, which were previously "
+            "observed on the Main LAN, were no longer "
             "observed in the post-segmentation Main LAN scan. This "
             "result is consistent with the intended migration of "
             "these IoT devices to the segmented Guest Network.\n\n"
