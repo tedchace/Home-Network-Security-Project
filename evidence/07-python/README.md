@@ -9,9 +9,9 @@ The supplied screenshot, script, two CSVs and Markdown report are integrated. Th
 |---|---|---|
 | Report screenshot | [01-python-security-assessment-report.png](01-python-security-assessment-report.png) | Redacted image |
 | Script | [network_security_report.py](../../automation/network_security_report.py) | Original logic; trailing whitespace normalized; unchanged source retained privately |
-| Main pre inventory | [asset_inventory_pre_segmentation.csv](../../reports/asset_inventory_pre_segmentation.csv) | Pseudonymized supplied CSV |
-| Main post inventory | [asset_inventory_post_segmentation.csv](../../reports/asset_inventory_post_segmentation.csv) | Pseudonymized supplied CSV |
-| Supplied report | [security_report.md](../../reports/security_report.md) | Pseudonymized supplied Markdown |
+| Main pre inventory | [asset_inventory_pre_segmentation_sanitized.csv](../../reports/asset_inventory_pre_segmentation_sanitized.csv) | Pseudonymized supplied CSV |
+| Main post inventory | [asset_inventory_post_segmentation_sanitized.csv](../../reports/asset_inventory_post_segmentation_sanitized.csv) | Pseudonymized supplied CSV |
+| Supplied report | [security_report_sanitized.md](../../reports/security_report_sanitized.md) | Pseudonymized supplied Markdown |
 | Guest derived inventory | [asset_inventory_guest_post_segmentation.csv](../../reports/asset_inventory_guest_post_segmentation.csv) | Generated during verification; not a supplied artifact |
 | Reconciliation | [python-xml-validation.md](../../documentation/python-xml-validation.md) | Results, scan metadata, identity correlation and limitations |
 | Reproduction tool | [verify_lab_data.py](../../automation/verify_lab_data.py) | Local-only verification; writes into ignored private output folder |
