@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Raw/private security evidence
+private/
+raw/
+*.pcap
+*.pcapng
+*.cap
+
+# Raw Nmap scans
+nmap_main_pre_segmentation.xml
+nmap_main_post_segmentation.xml
+# Guest raw scan (Main XML rules retained above)
+nmap_guest_post_segmentation.xml

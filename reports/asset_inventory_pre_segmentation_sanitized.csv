@@ -1,0 +1,13 @@
+ip_address,mac_address,vendor,hostname,open_port_count,open_ports,services
+192.0.2.1,02:00:00:00:00:02,Google,,7,"53/tcp, 80/tcp, 5000/tcp, 8080/tcp, 8081/tcp, 8443/tcp, 10010/tcp","53/tcp:domain, 80/tcp:http, 5000/tcp:upnp, 8080/tcp:http-proxy, 8081/tcp:blackice-icecap, 8443/tcp:https-alt, 10010/tcp:rxapi"
+192.0.2.20,02:00:00:00:00:0a,Alarm.com,,1,554/tcp,554/tcp:rtsp
+192.0.2.21,02:00:00:00:00:07,Alarm.com,asset-01.example.invalid,1,554/tcp,554/tcp:rtsp
+192.0.2.22,02:00:00:00:00:0b,The Chamberlain Group,garage-controller.example.invalid,1,80/tcp,80/tcp:http
+192.0.2.25,02:00:00:00:00:08,Alarm.com,asset-02.example.invalid,1,554/tcp,554/tcp:rtsp
+192.0.2.27,02:00:00:00:00:01,Ieee Registration Authority,pool-controller.example.invalid,1,23/tcp,23/tcp:telnet
+192.0.2.29,02:00:00:00:00:06,Qolsys,,0,,
+192.0.2.31,02:00:00:00:00:05,,,5,"7000/tcp, 8008/tcp, 8009/tcp, 8443/tcp, 9000/tcp","7000/tcp:rtsp, 8008/tcp:http, 8009/tcp:castv2, 8443/tcp:https-alt, 9000/tcp:cslistener"
+192.0.2.74,02:00:00:00:00:09,,laptop.example.invalid,4,"135/tcp, 445/tcp, 5800/tcp, 5900/tcp","135/tcp:msrpc, 445/tcp:microsoft-ds, 5800/tcp:vnc-http, 5900/tcp:vnc"
+192.0.2.76,02:00:00:00:00:03,Google,,5,"80/tcp, 8080/tcp, 8081/tcp, 8443/tcp, 10010/tcp","80/tcp:http, 8080/tcp:http-proxy, 8081/tcp:blackice-icecap, 8443/tcp:https-alt, 10010/tcp:rxapi"
+192.0.2.77,02:00:00:00:00:04,Google,,5,"80/tcp, 8080/tcp, 8081/tcp, 8443/tcp, 10010/tcp","80/tcp:http, 8080/tcp:http-proxy, 8081/tcp:blackice-icecap, 8443/tcp:https-alt, 10010/tcp:rxapi"
+192.0.2.83,,,workstation.example.invalid,8,"135/tcp, 139/tcp, 445/tcp, 902/tcp, 912/tcp, 5432/tcp, 8000/tcp, 8089/tcp","135/tcp:msrpc, 139/tcp:netbios-ssn, 445/tcp:microsoft-ds, 902/tcp:vmware-auth, 912/tcp:vmware-auth, 5432/tcp:postgresql, 8000/tcp:http, 8089/tcp:http"
