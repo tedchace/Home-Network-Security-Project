@@ -34,7 +34,7 @@ The workstation has no MAC in either Main XML and is matched by workstation.exam
 
 ## Script review
 
-The [repository script](../Automation/network_security_report.py) contains the supplied logic with trailing whitespace normalized only. An unchanged original is retained privately with the source artifacts. It uses csv and ElementTree, reads two fixed filenames from the working directory, and writes the post CSV and Markdown report there. Its main function does not export the pre CSV or analyze Guest; the verifier calls the export/parser helpers for those datasets.
+The [repository script](../automation/network_security_report.py) contains the supplied logic with trailing whitespace normalized only. An unchanged original is retained privately with the source artifacts. It uses csv and ElementTree, reads two fixed filenames from the working directory, and writes the post CSV and Markdown report there. Its main function does not export the pre CSV or analyze Guest; the verifier calls the export/parser helpers for those datasets.
 
 Limitations retained rather than silently changing the original project implementation:
 
@@ -49,7 +49,7 @@ Limitations retained rather than silently changing the original project implemen
 Run from the repository root with Python 3:
 
 ```powershell
-python -B Automation/verify_lab_data.py
+python -B automation/verify_lab_data.py
 ```
 
 The verifier reads local ignored XML under evidence/04-nmap/private and the private original report/CSVs under evidence/07-python/private/original-reports. It writes regenerated results to evidence/07-python/private/reproduced and checks CSV equality, report line-content equality, parser agreement and identity-key uniqueness. It does not perform network scans or access Splunk. Private files are required and intentionally absent from Git. [The evidence index](../evidence/07-python/README.md) maps filenames and hashes.

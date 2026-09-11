@@ -63,7 +63,7 @@ The net five-service decline includes the missing laptop, missing workstation Po
 
 [Wireless analysis](../documentation/wireless-assessment.md) documents successful handshake capture, a failed initial dictionary, and Aircrack-ng KEY FOUND with a five-entry custom list containing the correct candidate. This confirms controlled offline candidate recovery, not a cryptographic break or general brute-force feasibility. Subsequent network entry is reported by the user but not shown.
 
-The WPA3 image shows an enablement confirmation dialog. Completion and stronger-PSK configuration are user/workflow-reported; applied settings, negotiated client security and post-change effectiveness are not independently demonstrated. UPnP appears enabled in that image, without establishing active mappings or WAN exposure.
+The initial WPA3 image shows an enablement confirmation dialog with UPnP enabled. The [later advanced settings screenshot](../evidence/02-hardening/04-wpa3-upnp-off-advanced-settings.png) corroborates applied WPA3 enablement and UPnP disablement. Stronger-PSK configuration remains user/workflow-reported; negotiated client security, active mappings, WAN exposure and post-change effectiveness are not established.
 
 ## Google Home configuration and operational evidence
 

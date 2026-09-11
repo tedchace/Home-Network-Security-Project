@@ -58,7 +58,7 @@ The Guest run summary reports four total targets despite /24 arguments, so exhau
 
 [F01](../evidence/03-wifite/01-wlan-discovery-handshake.png) records handshake capture and initial dictionary failure. [F02](../evidence/03-wifite/02-offline-dictionary-validation.png) records successful recovery using a small custom list containing the matching candidate. The user reports subsequent entry; a connection or resource-access test is not shown.
 
-[F03](../evidence/03-wifite/03-wpa3-enablement-confirmation.png) shows Turn on WPA3? awaiting confirmation. The user reports completion and the workflow reports a stronger PSK with WPA2/WPA3. Applied settings, client negotiation and post-hardening testing remain unverified by these images. This should be presented as reported remediation with partial configuration evidence, not proven elimination of the original attack path. See [wireless analysis](wireless-assessment.md).
+[F03](../evidence/03-wifite/03-wpa3-enablement-confirmation.png) shows Turn on WPA3? awaiting confirmation. The [later advanced settings screenshot](../evidence/02-hardening/04-wpa3-upnp-off-advanced-settings.png) subsequently shows WPA3 enabled and UPnP disabled. The workflow reports a stronger PSK and WPA2/WPA3 mixed mode. Client negotiation and post-hardening effectiveness remain unverified; the applied settings do not prove elimination of the original attack path. See [wireless analysis](wireless-assessment.md).
 
 ## Early configuration and usability checks
 

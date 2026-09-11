@@ -8,13 +8,13 @@ The supplied screenshot, script, two CSVs and Markdown report are integrated. Th
 | Artifact | Repository location | Handling |
 |---|---|---|
 | Report screenshot | [01-python-security-assessment-report.png](01-python-security-assessment-report.png) | Redacted image |
-| Script | [network_security_report.py](../../Automation/network_security_report.py) | Original logic; trailing whitespace normalized; unchanged source retained privately |
+| Script | [network_security_report.py](../../automation/network_security_report.py) | Original logic; trailing whitespace normalized; unchanged source retained privately |
 | Main pre inventory | [asset_inventory_pre_segmentation.csv](../../reports/asset_inventory_pre_segmentation.csv) | Pseudonymized supplied CSV |
 | Main post inventory | [asset_inventory_post_segmentation.csv](../../reports/asset_inventory_post_segmentation.csv) | Pseudonymized supplied CSV |
 | Supplied report | [security_report.md](../../reports/security_report.md) | Pseudonymized supplied Markdown |
 | Guest derived inventory | [asset_inventory_guest_post_segmentation.csv](../../reports/asset_inventory_guest_post_segmentation.csv) | Generated during verification; not a supplied artifact |
 | Reconciliation | [python-xml-validation.md](../../documentation/python-xml-validation.md) | Results, scan metadata, identity correlation and limitations |
-| Reproduction tool | [verify_lab_data.py](../../Automation/verify_lab_data.py) | Local-only verification; writes into ignored private output folder |
+| Reproduction tool | [verify_lab_data.py](../../automation/verify_lab_data.py) | Local-only verification; writes into ignored private output folder |
 
 Source files came from the user's Router Configuration & Test Project and Python Scripts folders. [sha256.csv](sha256.csv) records public derivative filenames and hashes. The original filename plan remains in original-placeholder.txt (private; not published).
 

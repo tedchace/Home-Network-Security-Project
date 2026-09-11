@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 import importlib.util, csv, json, collections, hashlib
 base=Path(__file__).resolve().parents[1]
 out=base/'evidence/07-python/private/reproduced'; out.mkdir(parents=True,exist_ok=True)
-spec=importlib.util.spec_from_file_location('submitted',base/'Automation/network_security_report.py')
+spec=importlib.util.spec_from_file_location('submitted',base/'automation/network_security_report.py')
 mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
 summary={}; assets={}
 for label in ['main_pre','main_post','guest_post']:

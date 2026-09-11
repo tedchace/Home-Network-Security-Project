@@ -12,7 +12,15 @@ Initially, Garage Door Controller IoT (192.0.2.22) and Pool Controller IoT (192.
 
 The Guest boundary is intended to restrict interaction between selected IoT systems and trusted endpoints. The Nmap targeted test shows filtered Main-to-Guest TCP/23. [Wireshark pre-segmentation ICMP](../evidence/05-wireshark/05-pre-segmentation-icmp-request-reply.png) shows pool-controller replies on Main; [post-segmentation ICMP](../evidence/05-wireshark/08-post-segmentation-main-to-guest-icmp.png) shows requests to both Guest devices without observed replies. These separate observations do not establish the full router policy, VLAN implementation, or bidirectional isolation. See [validation](../documentation/remediation-validation.md).
 
-The existing diagram paths are retained for later completion: `diagrams/network-before.png` and `diagrams/network-after.png`. Nmap topology views are scan visualizations, not physical wiring diagrams.
+The following diagrams summarize the original and final project configurations using illustrative subnet aliases. They combine changes made over time rather than reconstructing two scan timestamps: Guest is omitted from the original view to show its addition, although it already existed by the pre-segmentation scan baseline. The 500 Mbps and 1 Gbps labels are reported service plans; double-NAT remediation and WPA2/WPA3 mixed mode are owner-reported. The final settings screenshot corroborates WPA3 enabled and UPnP disabled. Device groups support identification and incident-response triage; they are organizational categories, not separate network segments. These are explanatory diagrams, not captured test evidence or complete firewall policies.
+
+### Original configuration
+
+![Original network configuration](../diagrams/network-before.png)
+
+### Final configuration
+
+![Final network configuration](../diagrams/network-after.png)
 
 ## Deployment and operational context
 
@@ -22,7 +30,7 @@ The [original workflow notes](../documentation/project-workflow.md) describe a p
 
 ## Wireless configuration evidence
 
-The [wireless screenshots](../evidence/03-wifite/README.md) show the assessment and a WPA3 enablement prompt. The workflow describes WPA2/WPA3 operation and the user reports completing the change; the prompt itself does not verify a final WPA3-only network or every client's negotiated mode. UPnP appears enabled in that captured settings view; active mappings and later state are not shown.
+The [wireless screenshots](../evidence/03-wifite/README.md) show the assessment and the initial WPA3 confirmation prompt, with UPnP enabled in that earlier view. The [later advanced settings screenshot](../evidence/02-hardening/04-wpa3-upnp-off-advanced-settings.png) shows WPA3 enabled and UPnP disabled at capture time. WPA2/WPA3 mixed-mode operation remains workflow-reported; per-client negotiation, active mappings and post-change effectiveness are not established by these settings views.
 
 ## Installation and placement detail
 

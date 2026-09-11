@@ -61,7 +61,7 @@ Review the supplied script before execution; parse all three XML files independe
 
 ## Wireless assessment sequence
 
-Review [F01–F03](../evidence/03-wifite/README.md) in workflow order: home-target discovery, handshake capture and tool validation, failed initial dictionary, successful custom-list offline verification, and WPA3 enablement prompt. Attribute Kali USB boot, subsequent network entry and completed hardening to the user's account where screenshots do not independently demonstrate them. Do not equate candidate recovery with an established network session or a confirmation dialog with verified mitigation. [Wireless analysis](../documentation/wireless-assessment.md) records each boundary. No new wireless commands were run during this update.
+Review [F01–F03](../evidence/03-wifite/README.md) in workflow order: home-target discovery, handshake capture and tool validation, failed initial dictionary, successful custom-list offline verification, and WPA3 enablement prompt. Then review the [later advanced settings screenshot](../evidence/02-hardening/04-wpa3-upnp-off-advanced-settings.png), which shows WPA3 on and UPnP off. Attribute Kali USB boot, subsequent network entry and stronger-PSK configuration to the user where screenshots do not demonstrate them. Applied settings do not establish client negotiation or mitigation effectiveness. [Wireless analysis](wireless-assessment.md) records each boundary. No new wireless commands were run during this update.
 
 ## Deployment and operational baseline
 

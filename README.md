@@ -35,7 +35,7 @@ flowchart LR
     Guest --> Pool[Pool controller / TCP 23]
 ```
 
-Before segmentation, the two controllers shared Main with trusted endpoints. After migration, their services remained observable from Guest. The diagram represents logical roles; it does not specify physical backhaul or a complete firewall policy. [Architecture and evidence](documentation/architecture.md).
+Before segmentation, the two controllers shared Main with trusted endpoints. After migration, their services remained observable from Guest. The diagram represents logical roles; it does not specify physical backhaul or a complete firewall policy. [Architecture and evidence](documentation/architecture.md) · [Before diagram](diagrams/network-before.png) · [After diagram](diagrams/network-after.png).
 
 ## Findings and Changes
 
@@ -44,7 +44,7 @@ Before segmentation, the two controllers shared Main with trusted endpoints. Aft
 | Pool controller exposed a Telnet-compatible service | Nmap and packet analysis | Migrated to Guest; no successful login or exploitation demonstrated |
 | Garage controller returned HTTP metadata | Nmap service enumeration | Migrated to Guest; device-control access not established |
 | Windows service listeners matched VMware processes | Service scan and local process mapping | Corroborated service ownership |
-| A captured wireless handshake validated a matching password candidate | Wifite and Aircrack-ng | Controlled dictionary test; stronger PSK and completed WPA3 change are user-reported |
+| A captured wireless handshake validated a matching password candidate | Wifite and Aircrack-ng | Controlled dictionary test; [later settings](evidence/02-hardening/04-wpa3-upnp-off-advanced-settings.png) show WPA3 on and UPnP off; stronger PSK remains user-reported |
 
 [Detailed findings](documentation/findings.md) · [Wireless assessment](documentation/wireless-assessment.md)
 
@@ -72,4 +72,4 @@ Skills demonstrated include network deployment, troubleshooting, asset correlati
 
 All assessment activity concerns the user's authorized home lab. Open ports are observations rather than proof of exploitable vulnerabilities. WPA3 effectiveness, full isolation coverage, and DNS-blocking efficacy remain outside the demonstrated results.
 
-Public evidence uses solid redaction masks, and report identifiers are pseudonymized. [Sanitization notes](documentation/publication-sanitization.md) describe the changes and remaining Git-metadata boundary. Automation code is licensed under [MIT](Automation/LICENSE). Documentation and evidence outside the automation directory are not separately licensed unless stated.
+Public evidence uses solid redaction masks, and report identifiers are pseudonymized. [Sanitization notes](documentation/publication-sanitization.md) describe the changes and remaining Git-metadata boundary. Automation code is licensed under [MIT](automation/LICENSE). Documentation and evidence outside the automation directory are not separately licensed unless stated.
